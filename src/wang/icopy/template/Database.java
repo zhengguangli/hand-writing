@@ -7,11 +7,12 @@ public class Database {
 
     /**
      * 获取Customer实列
+     * 
      * @param id 用户id
      * @return 用户实列
      */
     public static Customer getCustomer(int id) {
-        return new Customer();
+        return new Customer(21, "Marry");
     }
 
 }

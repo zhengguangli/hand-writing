@@ -1,7 +1,5 @@
 package wang.icopy.template;
 
-import java.util.function.Consumer;
-
 /**
  * 定义抽象类实现模板方法
  */
@@ -19,14 +17,4 @@ public abstract class AbstractOnlineBanking {
         makeCustomerHappy(customer);
     }
 
-    /**
-     * 使用Lambda定义模板方法
-     * 
-     * @param id                用户id
-     * @param makeCustomerHappy Consumer Function
-     */
-    public void processCustomer(int id, Consumer<Customer> makeCustomerHappy) {
-        Customer customer = Database.getCustomer(id);
-        makeCustomerHappy.accept(customer);
-    }
 }
